@@ -1,16 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using OdeToFood.Core;
+using OdeToFood.Data;
 
 namespace OdeToFood.Pages.Restaurants
 {
     public class DetailModel : PageModel
     {
+        private readonly IRestaurantData _restaurantData;
 
         public Restaurant Restaurant { get; set; }
 
-        public void OnGet(int restaurantId)
+        public DetailModel(IRestaurantData restaurantData)
         {
-            Restaurant = new Restaurant { Id = restaurantId};
+            _restaurantData = restaurantData;
+        }
+
+        public IActionResult OnGet(int restaurantId)
+        {
+            Restaurant = _restaurantData.GetById(restaurantId);
+            if (Restaurant is null)
+                return RedirectToPage("/Error");
+            return Page();
 
         }
     }
