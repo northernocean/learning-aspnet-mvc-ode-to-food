@@ -31,18 +31,21 @@
                 <a class="btn btn-light"
                    asp-page="./Detail"
                    asp-route-restaurantId="@restaurant.Id">
-                   Details
-                   <!--<i class="fas fa-search-plus"></i>-->
+                    Details
+                    <!--<i class="fas fa-search-plus"></i>-->
                 </a>
                 <a class="btn btn-light"
                    asp-page="./Edit"
                    asp-route-restaurantId="@restaurant.Id">
-                   Edit
+                    Edit
                 </a>
             </td>
         </tr>
     }
 </table>
 
-@Model.Message
+<a asp-page="./Edit" class="btn btn-primary">New</a>
 
+@*
+  @Model.Message
+*@

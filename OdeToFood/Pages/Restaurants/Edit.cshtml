@@ -1,10 +1,10 @@
-﻿@page "{restaurantId:int}"
+﻿@page "{restaurantId:int?}"
 @model OdeToFood.Pages.Restaurants.EditModel
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h3>Editing @Model.Restaurant.Name</h3>
+<h3>@(Model.Restaurant.Id == 0 ? "Add Restaurant" : ("Edit " + Model.Restaurant.Name))</h3>
 
 <form method="post">
     <div class="form-group">
@@ -27,7 +27,6 @@
     </div>
     <input type="hidden" asp-for="Restaurant.Id" />
     <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-page="./Detail" asp-route-restaurantId="@Model.Restaurant.Id" class="btn btn-secondary">Cancel</a>
 </form>
 
 
