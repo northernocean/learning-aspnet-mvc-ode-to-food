@@ -37,7 +37,12 @@
                 <a class="btn btn-light"
                    asp-page="./Edit"
                    asp-route-restaurantId="@restaurant.Id">
-                    Edit
+                    <i class="fas fa-pencil-alt"></i>
+                </a>
+                <a class="btn btn-light"
+                   asp-page="./Delete"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="far fa-trash-alt"></i>
                 </a>
             </td>
         </tr>
@@ -47,5 +52,5 @@
 <a asp-page="./Edit" class="btn btn-primary">New</a>
 
 @*
-  @Model.Message
+    @Model.Message
 *@
