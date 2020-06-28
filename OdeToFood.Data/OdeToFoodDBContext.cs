@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OdeToFood.Core;
 
 namespace OdeToFood.Data
@@ -18,6 +17,7 @@ namespace OdeToFood.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+            //https://nodogmablog.bryanhogan.net/2018/09/saving-enums-with-entity-framework-core/
             modelBuilder
                 .Entity<Restaurant>()
                 .Property(e => e.Cuisine)
