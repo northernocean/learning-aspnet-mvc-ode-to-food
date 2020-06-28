@@ -50,6 +50,7 @@ namespace OdeToFood.Data
 
         public IEnumerable<Restaurant> GetRestaurantsByName(string name)
         {
+            var x = DbContext.Restaurants;
             return DbContext.Restaurants.Where(r => string.IsNullOrEmpty(name) || r.Name.StartsWith(name)).ToList();
         }
 

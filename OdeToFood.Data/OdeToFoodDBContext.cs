@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OdeToFood.Core;
 
 namespace OdeToFood.Data
@@ -14,5 +15,13 @@ namespace OdeToFood.Data
 
         public DbSet<Restaurant> Restaurants { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder
+                .Entity<Restaurant>()
+                .Property(e => e.Cuisine)
+                .HasConversion(c => (int)c, c => (CuisineType)c);
+        }
     }
 }

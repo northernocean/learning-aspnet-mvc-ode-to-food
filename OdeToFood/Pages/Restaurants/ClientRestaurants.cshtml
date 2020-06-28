@@ -26,7 +26,7 @@
 
         $(function () {
 
-            cuisines = ["Unknown","Mexican","Italian","Indian"];
+            //cuisines = ["Unknown", "Mexican", "Italian", "Indian"];
 
             $.ajax(
                 "/api/restaurants/",
@@ -39,15 +39,17 @@
                         columns: [
                             { "data": "name" },
                             { "data": "location" },
-                            {
-                                "data": "cuisine",
-                                "render": function (data) {
-                                    return cuisines[data]
-                                }
-                            }]
+                            { "data": "cuisine" }
+                            //{
+                            //    "data": "cuisine",
+                            //    "render": function (data) {
+                            //        return cuisines[data]
+                            //    }
+                            ]
                     });
 
                 })
+                .fail(function () { console.log("failed") })
         });
 
     </script>
