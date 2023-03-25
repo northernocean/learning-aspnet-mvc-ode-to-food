@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cucumber", "Cucumber\Cucumber.csproj", "{6DDE3408-B167-45A4-8EC8-DB7304556448}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cucumber", "Cucumber\Cucumber.csproj", "{A32BAA4A-0BF6-48D9-8BE1-A6B7229C663C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6DDE3408-B167-45A4-8EC8-DB7304556448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DDE3408-B167-45A4-8EC8-DB7304556448}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DDE3408-B167-45A4-8EC8-DB7304556448}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DDE3408-B167-45A4-8EC8-DB7304556448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32BAA4A-0BF6-48D9-8BE1-A6B7229C663C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32BAA4A-0BF6-48D9-8BE1-A6B7229C663C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32BAA4A-0BF6-48D9-8BE1-A6B7229C663C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32BAA4A-0BF6-48D9-8BE1-A6B7229C663C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C81A94A-AE7A-4851-8D24-92574BAFCA6B}
+		SolutionGuid = {FCD3A67E-A76A-47EA-A733-82792FBC1DED}
 	EndGlobalSection
 EndGlobal
