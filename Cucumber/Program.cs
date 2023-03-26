@@ -5,10 +5,21 @@ namespace Cucumber
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
+            
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
-
+            if(app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
             app.Run();
         }
     }
